@@ -1,9 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 
-import { Footer, Navigation, Provider } from '@/components';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/ReactToastify.min.css'
 
-import '@/styles/styles.sass';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Footer, Navigation, Provider } from '@/components'
+
+import '@/styles/styles.sass'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const metadata: Metadata = {
   title: 'Liefermax - Your Delivery Service',
@@ -22,6 +25,7 @@ export default ({ children }: { children: React.ReactNode }) => {
           <main className="container pb-5 mb-5">{children}</main>
 
           <Footer />
+          <ToastContainer />
         </Provider>
       </body>
     </html>

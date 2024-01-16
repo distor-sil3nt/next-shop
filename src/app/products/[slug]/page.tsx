@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Products } from '@/schema'
 import { Product } from '@/types'
 
-import { ProductDetail } from '@/components'
+import { ProductDetail, Transition } from '@/components'
 
 import { mongodb } from '@/utils'
 
@@ -25,19 +25,21 @@ export default async ({ params: { slug } }: { params: { slug: string } }) => {
    */
 
   return (
-    <section>
-      {!product ? (
-        <h2>Product not available</h2>
-      ) : (
-        <>
-          <p>
-            <Link href="/" className="text-dark">
-              ← Back to Overview
-            </Link>
-          </p>
-          <ProductDetail product={product} />
-        </>
-      )}
-    </section>
+    <Transition>
+      <section>
+        {!product ? (
+          <h2>Product not available</h2>
+        ) : (
+          <>
+            <p>
+              <Link href="/" className="text-dark">
+                ← Back to Overview
+              </Link>
+            </p>
+            <ProductDetail product={product} />
+          </>
+        )}
+      </section>
+    </Transition>
   )
 }

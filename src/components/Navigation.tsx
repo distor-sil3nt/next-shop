@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux'
 
 import { RootState } from '@/store'
 
+import './Navigation.sass'
+
 export default () => {
   const count = useSelector((state: RootState) => state.cart.count)
 
@@ -22,10 +24,12 @@ export default () => {
         <li>
           <Link href="/cart" aria-label="Go to shopping cart">
             <Image src="/images/cart.png" alt="Shopping Cart Icon" width={30} height={30} aria-hidden="true" />
+            {count > 0 && (
+              <Badge pill bg="success">
+                {count}
+              </Badge>
+            )}
           </Link>
-          <Badge pill bg="success">
-            {count}
-          </Badge>
         </li>
       </ul>
     </nav>

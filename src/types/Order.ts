@@ -5,5 +5,5 @@ export interface Order {
   status: number
   total: number
   payment: number
-  products: { _id: number; name: string; amount: number; extras: string[] }[]
+  products: { _id?: number; name: string; amount: number; extras: string[] }[]
 }
