@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
-import { CartProduct, ProductExtra } from '@/types';
+import { CartProduct, ProductExtra } from '@/types'
 
 const initialState = {
   count: 0,
