@@ -1,0 +1,23 @@
+{
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "importOrder": [
+    "^next(/.*)?$",
+    "^react(.*)?$",
+    "^(.*)redux(.*)$",
+    "^(.*)types(.*)$|^(.*)schema(.*)$",
+    "^(.*)components(.*)$",
+    "^(.*)hooks(.*)$",
+    "^(.*)store(.*)$",
+    "^(.*)utils(.*)$",
+    "(.*)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true
+}

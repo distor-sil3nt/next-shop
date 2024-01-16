@@ -1,0 +1,8 @@
+export { default as DeleteButton } from './DeleteButton.tsx'
+export { default as Footer } from './Footer.tsx'
+export { default as Navigation } from './Navigation.tsx'
+export { default as ProductDetail } from './ProductDetail.tsx'
+export { default as ProductList } from './ProductList.tsx'
+export { default as Provider } from './Provider.tsx'
+export { default as Slider } from './Slider.tsx'
+export { default as StatusButton } from './StatusButton.tsx'
