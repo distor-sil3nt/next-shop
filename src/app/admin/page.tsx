@@ -1,4 +1,6 @@
+import { cookies } from 'next/headers'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 import { CloseButton, Table } from 'react-bootstrap'
 
@@ -9,6 +11,13 @@ import { DeleteButton, StatusButton } from '@/components'
 import axios from 'axios'
 
 const getOrders = async () => {
+  const cookie = cookies()
+  const token = cookie.get('token')
+
+  if (token?.value !== process.env.TOKEN) {
+    return redirect('/admin/login')
+  }
+
   const { data: orders } = await axios.get(`${process.env.NEXT_PUBLIC_API}/orders`)
 
   return orders
