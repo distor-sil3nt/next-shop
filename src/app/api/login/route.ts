@@ -15,7 +15,7 @@ export const POST = async (request: Request) => {
       },
     })
   } else {
-    return  Response.json('login failed', {
+    return Response.json('login failed', {
       status: 400,
     })
   }
