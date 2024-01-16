@@ -7,7 +7,7 @@ import { Button, Form, FormControl, FormGroup } from 'react-bootstrap'
 
 import axios from 'axios'
 
-export default () => {
+const Login = () => {
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
@@ -49,3 +49,7 @@ export default () => {
     </>
   )
 }
+
+Login.displayName = 'Login'
+
+export default Login
