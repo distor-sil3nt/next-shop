@@ -10,6 +10,8 @@ import { useDispatch } from 'react-redux'
 import { Product, ProductExtra } from '@/types'
 
 import { addProducts } from '@/store/cartSlice'
+
+import style from './ProductDetail.module.sass'
 import { v4 as uuidv4 } from 'uuid'
 
 export default ({ product }: { product: Product }) => {
@@ -56,21 +58,9 @@ export default ({ product }: { product: Product }) => {
   }
 
   return (
-    <article className="row row-cols-2 mt-2">
+    <article className={`row row-cols-xs-1 row-cols-sm-2 mt-2 ${style.product}`}>
       <figure>
-        <Image
-          className="rounded-3"
-          src={image}
-          alt={name}
-          priority={true}
-          sizes="100vw"
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-          width={600}
-          height={600}
-        />
+        <Image className="rounded-3" src={image} alt={name} priority={true} sizes="100vw" width={600} height={600} />
       </figure>
       <footer>
         <h1>{name}</h1>

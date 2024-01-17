@@ -37,7 +37,7 @@ const Order = async ({ params: { id } }: { params: { id: string } }) => {
       <>
         <h1>Order Status</h1>
         <section className="row mt-4">
-          <div className="col-9">
+          <div className="col-md-8 col-lg-9">
             <Table hover responsive>
               <thead>
                 <tr>
@@ -82,7 +82,7 @@ const Order = async ({ params: { id } }: { params: { id: string } }) => {
               </tbody>
             </Table>
           </div>
-          <div className="col-3 p2">
+          <div className="col-md-4 col-lg-3 p2">
             <Card className="shadow">
               <CardHeader as="h4">Total</CardHeader>
               <CardBody className="text-center">

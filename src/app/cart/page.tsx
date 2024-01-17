@@ -129,7 +129,7 @@ const Cart = () => {
         <>
           <h1>Shopping Cart</h1>
           <section className="row mt-4">
-            <div className="col-9">
+            <div className="col-md-8 col-lg-9">
               <Table hover responsive>
                 <thead>
                   <tr>
@@ -174,7 +174,7 @@ const Cart = () => {
                 </tbody>
               </Table>
             </div>
-            <div className="col-3 p-2">
+            <div className="col-md-4 col-lg-3 p-2">
               <Card className="shadow">
                 <CardHeader as="h4">Total</CardHeader>
                 <CardBody className="text-center">

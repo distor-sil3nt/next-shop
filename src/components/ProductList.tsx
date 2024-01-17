@@ -20,7 +20,7 @@ export default async () => {
 
   return (
     <section className="products">
-      <ul className={`row row-cols-3 ${style.products}`}>
+      <ul className={`row ${style.products}`}>
         {products?.map(({ name, description, price, slug, image }) => (
           <li key={name} className="mt-3 col">
             <Card as="article">
