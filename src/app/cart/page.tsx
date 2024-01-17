@@ -18,7 +18,7 @@ import { PayPalButtons, PayPalScriptProvider, usePayPalScriptReducer } from '@pa
 import axios from 'axios'
 import { motion } from 'framer-motion'
 
-export default () => {
+const Cart = () => {
   const clientId = process.env.NEXT_PUBLIC_PAYPAL_ID || ''
   const options = { clientId, components: 'buttons', currency: 'EUR' }
   const cart = useSelector((state: RootState) => state.cart)
@@ -67,7 +67,7 @@ export default () => {
           currency: currency,
         },
       })
-    }, [currency, showSpinner])
+    }, [currency, dispatch, options, showSpinner])
 
     return (
       <>
@@ -198,3 +198,7 @@ export default () => {
     </motion.div>
   )
 }
+
+Cart.displayName = 'Cart'
+
+export default Cart

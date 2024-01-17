@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 
 import { useEffect } from 'react'
 
-export default () => {
+const NotFound = () => {
   const router = useRouter()
 
   useEffect(() => {
@@ -13,3 +13,7 @@ export default () => {
 
   return <></>
 }
+
+NotFound.displayName = 'NotFound'
+
+export default NotFound

@@ -13,7 +13,7 @@ const getProduct = async (slug: string) => {
   return (await Products.findOne({ slug }).lean()) as Product
 }
 
-export default async ({ params: { slug } }: { params: { slug: string } }) => {
+const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
   const product = await getProduct(slug)
 
   /**
@@ -43,3 +43,5 @@ export default async ({ params: { slug } }: { params: { slug: string } }) => {
     </Transition>
   )
 }
+
+export default Product

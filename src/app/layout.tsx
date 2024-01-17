@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Enjoy delicious pizza delivered blazingly fast',
 }
 
-export default ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="de">
       <body>
@@ -31,3 +31,7 @@ export default ({ children }: { children: React.ReactNode }) => {
     </html>
   )
 }
+
+Layout.displayName = 'Layout'
+
+export default Layout

@@ -23,7 +23,7 @@ const getOrders = async () => {
   return orders
 }
 
-export default async () => {
+const Admin = async () => {
   const orders: Order[] = await getOrders()
 
   return (
@@ -68,3 +68,7 @@ export default async () => {
     </>
   )
 }
+
+Admin.displayName = 'Admin'
+
+export default Admin

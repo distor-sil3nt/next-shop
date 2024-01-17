@@ -1,10 +1,10 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { Button, Card, CardBody, CardHeader, CardTitle, Spinner, Table } from 'react-bootstrap'
+import { Button, Card, CardBody, CardHeader, CardTitle, Spinner, Table } from 'react-bootstrap';
 
-import { Order } from '@/types'
+import { Order } from '@/types';
 
-import axios from 'axios'
+import axios from 'axios';
 
 const getOrder = async (id: string) => {
   const { data: order } = await axios.get(`${process.env.NEXT_PUBLIC_API}/orders/${id}`)
@@ -12,7 +12,7 @@ const getOrder = async (id: string) => {
   return order as Order
 }
 
-export default async ({ params: { id } }: { params: { id: string } }) => {
+const Order = async ({ params: { id } }: { params: { id: string } }) => {
   const { _id, customer, address, payment, status, total, products } = await getOrder(id)
 
   const statusMessage =
@@ -74,7 +74,7 @@ export default async ({ params: { id } }: { params: { id: string } }) => {
                     <td>{amount}</td>
                     <td>
                       {extras.map((extra, index) => (
-                        <span>{`${extra}${index !== extras.length - 1 ? ', ' : ''}`}</span>
+                        <span key={index}>{`${extra}${index !== extras.length - 1 ? ', ' : ''}`}</span>
                       ))}
                     </td>
                   </tr>
@@ -100,3 +100,5 @@ export default async ({ params: { id } }: { params: { id: string } }) => {
     )
   }
 }
+
+export default Order

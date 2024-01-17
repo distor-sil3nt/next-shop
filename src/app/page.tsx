@@ -1,6 +1,6 @@
 import { ProductList, Slider, Transition } from '@/components'
 
-export default () => {
+const App = () => {
   return (
     <Transition>
       <Slider />
@@ -8,3 +8,7 @@ export default () => {
     </Transition>
   )
 }
+
+App.displayName = 'App'
+
+export default App
