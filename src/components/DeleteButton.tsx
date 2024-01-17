@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap'
 
 import axios from 'axios'
 
-export default ({ id }: { id: number }) => {
+const DeleteButton = ({ id }: { id: number }) => {
   const router = useRouter()
 
   const deleteOrder = async () => {
@@ -24,3 +24,7 @@ export default ({ id }: { id: number }) => {
     </Button>
   )
 }
+
+DeleteButton.displayName = 'DeleteButton'
+
+export default DeleteButton
